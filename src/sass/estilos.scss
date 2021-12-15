@@ -1,0 +1,160 @@
+@import "./header.scss";
+@import "./hero.scss";
+@import "./menu.scss";
+@import "./section2.scss";
+@import "cards.scss";
+@import "./articles.scss";
+@import "./footer.scss";
+@import "./simulator.scss";
+@import "./login.scss";
+@import "./partner.scss";
+@import "./heroAbout.scss";
+@import "./heroBeneficios.scss";
+@import "./containerAbout.scss";
+@import "./sectionBeneficios.scss";
+@import "./heroComoFunciona.scss";
+@import "./sectionComoFunciona.scss";
+@import "./wizard.scss";
+@import "./heroWizard.scss";
+
+:root {
+  // ### Primary
+
+  --darkBlue: hsl(0, 0%, 16%);
+  --limeRed: hsl(4, 71%, 51%);
+  --brightCyan: hsl(192, 70%, 51%);
+
+  // ### Neutral
+
+  --grayishBlue: hsl(233, 8%, 62%);
+  --lightGrayishBlue: hsl(220, 16%, 96%);
+  --lightGray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+  font-size: 16px;
+  --wrapperSpace: 1.5em;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  margin: 0;
+  color: var(--grayishBlue);
+  overflow-x: hidden;
+}
+
+.ui-overlay-a,
+.ui-page-theme-a,
+.ui-page-theme-a .ui-panel-wrapper {
+  background-color: #f9f9f9;
+  border-color: #bbb;
+  color: #333;
+  text-shadow: none;
+}
+
+.imagenMedia,
+.imgmediaSeg2,
+.imagenMediacf {
+  display: flex;
+  justify-content: center;
+  margin: 2em;
+  min-width: 100%;
+  position: relative;
+  margin: 0;
+  img {
+    margin-top: 3em;
+    width: 6%;
+  }
+  // background: var(--white);
+}
+.imgmediaSeg2 {
+  top: -65px;
+}
+
+.imagenMediacf {
+  top: 5em;
+  margin-bottom: 6em;
+}
+
+.copy {
+  line-height: 1.7;
+  font-size: 0.9em;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.wrapper {
+  padding: 0 var(--wrapperSpace);
+  max-width: calc(1115px + 1.5em);
+  margin: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@mixin title {
+  font-size: 2.2em;
+  color: var(--darkBlue);
+  font-weight: 300;
+  line-height: 1.3;
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
+.title {
+  &__h1 {
+    @include title;
+  }
+  &__h2 {
+    @include title;
+    font-size: 1.4em;
+  }
+  &__h3 {
+    @include title;
+    font-size: 1em;
+  }
+}
+
+.button {
+  border: none;
+  padding: 0.9em 2.2em;
+  font-size: 1em;
+  border-radius: 1.5em;
+  color: var(--white);
+  background-image: linear-gradient(
+    to right,
+    var(--limeRed) 0%,
+    var(--brightCyan) 100%
+  );
+}
+
+@mixin icon {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  background-repeat: no-repeat;
+}
+
+.icon {
+  &__facebook {
+    @include icon;
+    background-image: url("../images/icon-facebook.svg");
+  }
+  &__youtube {
+    @include icon;
+    background-image: url("../images/icon-youtube.svg");
+  }
+  &__instagram {
+    @include icon;
+    background-image: url("../images/icon-instagram.svg");
+  }
+  &__twitter {
+    @include icon;
+    background-image: url("../images/icon-twitter.svg");
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .imagenMedia {
+    top: -67px;
+  }
+}

@@ -1,0 +1,100 @@
+.heroBeneficios {
+  text-align: center;
+  padding-bottom: 10em;
+  background: url("../images/1-02.jpg") center no-repeat;
+  margin: 75px calc(-1 * var(--wrapperSpace));
+  background-size: cover;
+
+  .copy {
+    margin-bottom: 2.5em;
+  }
+  &__img {
+    margin-bottom: 1.2em;
+    top: 98px;
+    background: var(--lightGrayishBlue);
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+    text-align: center;
+    width: 96vw;
+    left: -14px;
+    position: relative;
+    padding: 1.2em;
+  }
+  &__imageSrc {
+    display: none;
+  }
+  &__description {
+    position: relative;
+    top: 119px;
+    padding: 0 3em;
+  }
+
+  .col-md-9.col-xs-9.title__h2 {
+    width: 100%;
+    position: relative;
+    left: -27px;
+    font-weight: 700;
+  }
+  @media screen and (min-width: 768px) {
+    text-align: left;
+    background: url("../images/1-02.jpg") no-repeat;
+    background-size: cover;
+    min-height: 550px;
+    box-sizing: border-box;
+    &__content {
+      position: relative;
+      // border: 1px solid red;
+      display: grid;
+      align-items: center;
+      min-height: 550px;
+      grid-template-areas: "description img";
+      grid-template-columns: 330px 1fr;
+    }
+    &__description {
+      // border: 1px solid green;
+      top: -40px;
+    }
+    &__img {
+      grid-area: img;
+      min-height: 505px;
+      // background: none;
+      position: absolute;
+      width: 400px;
+      left: 0;
+      top: 91;
+      // height: 768px;
+      // background: url("../images/image-mockups.png") left bottom no-repeat;
+      background-size: cover;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    &__content {
+      // position: static;
+    }
+    &__description {
+      // border: 1px solid green;
+      top: 119px;
+    }
+    &__imageSrc {
+      display: block;
+      position: relative;
+      top: 180px;
+      z-index: 1;
+      margin: 0 auto;
+    }
+    &__img {
+      // background: url("../images/image-mockups.png") right -100px bottom no-repeat;
+      background: var(--lightGrayishBlue);
+      box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.3);
+      border-radius: 24px;
+      position: absolute;
+      text-align: center;
+      padding: 10px 30px;
+      // width: 700px;
+      left: 340px;
+      right: 0;
+      top: 100px;
+      height: 345px;
+    }
+  }
+}
